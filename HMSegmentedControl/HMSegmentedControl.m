@@ -321,7 +321,7 @@ NSUInteger HMSegmentedControlNoSegment = (NSUInteger)-1;
             CGFloat stringHeight = 0;
             CGSize size = [self measureTitleAtIndex:idx];
             stringWidth = size.width;
-            stringHeight = size.height;
+            stringHeight = size.height + 8;
             CGRect rectDiv = CGRectZero;
             CGRect fullRect = CGRectZero;
             
