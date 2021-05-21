@@ -283,7 +283,7 @@
             CGFloat stringHeight = 0;
             CGSize size = [self measureTitleAtIndex:idx];
             stringWidth = size.width;
-            stringHeight = size.height + 2;
+            stringHeight = size.height + 1;
             CGRect rectDiv, fullRect;
             
             // Text inside the CATextLayer will appear blurry unless the rect values are rounded
@@ -455,6 +455,7 @@
         } else {
             if (!self.selectionIndicatorStripLayer.superlayer) {
                 self.selectionIndicatorStripLayer.frame = [self frameForSelectionIndicator];
+                self.selectionIndicatorStripLayer.cornerRadius = 2.0;
                 [self.scrollView.layer addSublayer:self.selectionIndicatorStripLayer];
                 
                 if (self.selectionStyle == HMSegmentedControlSelectionStyleBox && !self.selectionIndicatorBoxLayer.superlayer) {
