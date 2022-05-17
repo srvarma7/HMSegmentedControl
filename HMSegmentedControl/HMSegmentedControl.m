@@ -455,7 +455,9 @@
         } else {
             if (!self.selectionIndicatorStripLayer.superlayer) {
                 self.selectionIndicatorStripLayer.frame = [self frameForSelectionIndicator];
+
                 self.selectionIndicatorStripLayer.cornerRadius = 4.5;
+
                 [self.scrollView.layer addSublayer:self.selectionIndicatorStripLayer];
                 
                 if (self.selectionStyle == HMSegmentedControlSelectionStyleBox && !self.selectionIndicatorBoxLayer.superlayer) {
@@ -587,7 +589,9 @@
                     selectedSegmentOffset = selectedSegmentOffset + [width floatValue];
                     i++;
                 }
+
                 return CGRectMake(selectedSegmentOffset + self.selectionIndicatorEdgeInsets.left + 8.5, indicatorYOffset, [[self.segmentWidthsArray objectAtIndex:self.selectedSegmentIndex] floatValue] - self.selectionIndicatorEdgeInsets.right - 17.5, (self.selectionIndicatorHeight + self.selectionIndicatorEdgeInsets.bottom)*2);
+
             }
             
             return CGRectMake((self.segmentWidth + self.selectionIndicatorEdgeInsets.left) * self.selectedSegmentIndex, indicatorYOffset, self.segmentWidth - self.selectionIndicatorEdgeInsets.right, (self.selectionIndicatorHeight)*2);
